@@ -73,3 +73,8 @@ body {
 #cursive {
     font-family: cursive;
 }
+
+#train {
+    position: relative;
+    cursor: pointer;
+}

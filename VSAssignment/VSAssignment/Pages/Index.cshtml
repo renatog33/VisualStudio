@@ -3,13 +3,34 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<body>
+    
+    <div class="text-center">
 
-<div class="text-center">
-    <h1 id="jill_scott" class="display-4 green-text" onmouseover="newColor()" onmouseout="oldColor()">Jill Scott</h1>
-    <p id="cursive"><a href="https://www.grammy.com/artists/jill-scott/12458">Learn about</a> Grammy-winning artist Jill Scott.</p>
 
-    <br />
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/SCerHrqWQkQ" title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </iframe>
-</div>
+        <h1 id="jill_scott" class="display-4 green-text" onmouseover="newColor()" onmouseout="oldColor()">Jill Scott</h1>
+        <p id="cursive"><a href="https://www.grammy.com/artists/jill-scott/12458">Learn about</a> Grammy-winning artist Jill Scott.</p>
+        <br />
+        <p>She's unstoppable, like a runaway locomotive!</p>
+        <img id="train" src="https://js.cx/clipart/train.gif">
+
+        <br />
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SCerHrqWQkQ" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </iframe>
+    </div>
+    <script>
+        train.onclick = function () {
+            let start = Date.now();
+
+            let timer = setInterval(function () {
+                let timePassed = Date.now() - start;
+
+                train.style.left = timePassed / 5 + 'px';
+
+                if (timePassed > 2000) clearInterval(timer);
+
+            }, 20);
+        }
+    </script>
+</body>
